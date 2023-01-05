@@ -1,0 +1,18 @@
+public int[] plusOne(int[] digits) {
+        //to find the length of array
+        int x= digits.length;
+        
+        //to iterate through each element from last
+        for(int i = x-1; i >= 0; i-- ){
+             if(digits[i] < 9){
+            digits[i]++;
+            return digits;
+            }
+            // to make that element = 0 if it is 9
+            digits[i]=0;
+        }
+        // to increase the length of the array
+        digits = new int[digits.length + 1];
+        digits[0] = 1;
+        return digits;
+    }
