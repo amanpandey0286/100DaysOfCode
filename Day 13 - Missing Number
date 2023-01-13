@@ -1,0 +1,17 @@
+public int missingNumber(int[] nums) {
+        int sum = 0;
+        
+        //finding sum of elements of array
+        for(int i: nums){
+            sum += i;
+        }
+        int l = nums.length;
+        
+        //finding real sum of n natural numbers 
+        int realSum = (l*(l+1))/2;
+        
+        //realSum - sum to get the number which is not present.
+        //if in any case 0 is not present hence the realSum = sum and diff will be zero, which is our required number.
+        int reqNo = realSum - sum;
+        return reqNo;
+    }
