@@ -1,0 +1,20 @@
+public void moveZeroes(int[] nums) {
+        //variable which record the index of inserting of values.
+        int currentPosition = 0;
+
+        for(int i = 0; i < nums.length; i++ ){
+            //if currrent value is not 0 then assign it at currentposition index in array.
+            if(nums[i] != 0){
+                nums[currentPosition] = nums[i];
+                currentPosition++;
+            }
+        }
+        
+        //after assigning all the values to the starting.
+        //to assign 0 at left over indexes.
+        while(currentPosition < nums.length){
+            nums[currentPosition] = 0;
+            currentPosition++;
+        }
+        
+    }
