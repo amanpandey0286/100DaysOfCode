@@ -1,0 +1,15 @@
+public int findMaxConsecutiveOnes(int[] nums) {
+        int count = 0;
+        int maximum = 0;
+        for(int i = 0; i<nums.length; i++){
+            //if current element is 1 increase count and the maximum variable will be maximum of maximum variable and count at that instance.
+            if(nums[i] == 1){
+                count++;
+                maximum = Math.max(maximum, count);
+
+            }else{
+                count = 0;
+            }
+        }
+        return maximum;
+    
