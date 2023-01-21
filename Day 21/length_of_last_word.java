@@ -1,0 +1,17 @@
+public int lengthOfLastWord(String s) {
+        char[] arr=s.toCharArray();
+        int len=0;
+        boolean flag=false;
+        for(int i=arr.length-1; i>=0;i--)
+        {
+           if(arr[i] != ' ' && flag != true)
+           {
+               flag= true;
+           }
+           if(flag && arr[i] != ' ') len++;
+           else if (flag && arr[i] == ' ') break;
+        }
+        return len;
+    }
+
+//https://leetcode.com/problems/length-of-last-word/description/
